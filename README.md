@@ -1,6 +1,5 @@
 # spivelo
 A Generative Spatial RNA Velocity Inference Method for Resolving Tissue-Level Cell Fate Dynamics
-# SpiVelo
 
 SpiVelo combines single-cell and spatial transcriptomic information to analyze RNA dynamics in tissue. This source distribution contains two components: **SV-Integration**, which learns shared transcriptional programs and a soft cell-to-location mapping, and **SV-Velo**, which fits a hierarchical RNA kinetic model using Pyro variational inference.
 
@@ -59,9 +58,7 @@ Supply two AnnData `.h5ad` files:
 | Single-cell reference   | Unique cell and gene names; nonnegative expression in `X` or a selected layer; raw integer `layers['spliced']` and `layers['unspliced']`; complete cell-type annotations in `obs[CELL_TYPE_KEY]` |
 | Spatial transcriptomics | Unique location and gene names; nonnegative expression in `X` or a selected layer; finite two-dimensional coordinates in `obsm[SPATIAL_KEY]` |
 
-The inputs must share at least two nonzero genes. Resolve duplicated gene names explicitly before running. Do not replace raw spliced/unspliced counts with normalized, log-transformed, imputed, or rounded expression values.
-
-Data are not bundled inside `code`. If using the accompanying `Real_dataset.zip` or `Simulate_dataset.zip`, extract the archive and assign the appropriate paths in the notebook. Dataset annotations and layer names must be checked individually.
+The inputs must share at least two nonzero genes. Resolve duplicated gene names explicitly before running. 
 
 ## Configure and run
 
